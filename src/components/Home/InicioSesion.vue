@@ -6,14 +6,14 @@
           <label>Usuario</label> <br />
           <input type="text" v-model="usuario" /> <br />
           <label>Contraseña</label> <br />
-          <input type="text" v-model="clave" /> <br />
+          <input type="password" v-model="clave" /> <br />
           <v-btn v-on:click="inicio">Inicio Sesión</v-btn>
         </v-col>
       </v-row>
       <v-row>
-          <v-col>
-              <v-btn @click="allUsers" > allUsers</v-btn>
-          </v-col>
+        <v-col>
+          <v-btn @click="allUsers"> allUsers</v-btn>
+        </v-col>
       </v-row>
     </v-col>
   </v-row>
@@ -24,7 +24,8 @@ export default {
   data () {
     return {
       usuario: '',
-      clave: ''
+      clave: '',
+      token: ''
     }
   },
   methods: {
@@ -32,17 +33,22 @@ export default {
       alert('Iniciando Sesión')
       apiLocal
         .post('/Users/Authenticate', {
-          username: 'test',
-          password: 'test'
+          username: this.usuario,
+          password: this.clave
+        })
+        .then(respuesta => {
+          console.log(respuesta)
+          this.token=respuesta.data.token
+        })
+    },
+    allUsers () { 
+      apiLocal
+        .get('/Users/usuarios', {
+          headers: { Authorization: 'Bearer '+this.token }
         })
         .then(respuesta => {
           console.log(respuesta)
         })
-    },
-    allUsers () {
-      apiLocal.get('/Users/usuarios').then(respuesta => {
-        console.log(respuesta)
-      })
     }
   }
 }

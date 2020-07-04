@@ -1,7 +1,11 @@
 <template>
   <v-container>
     <InicioSesion/>
-    <indicador></indicador>
+    <label>Fecha</label> <br/>
+    <input type="text" v-model="b_fecha"> <br>
+    <indicador v-bind:propfecha="b_fecha" v-on:llamarcantidad="showcantidad"></indicador>
+    <label>Cantidad de series que consulta</label> <br/>
+    <label>{{cantidad_a_mostrar}}</label>
   </v-container>
 </template>
 
@@ -22,7 +26,13 @@ export default {
   },
   data(){
     return {
-      
+      b_fecha:'',
+      cantidad_a_mostrar:''
+    }
+  },
+  methods:{
+    showcantidad(cantidad){
+      this.cantidad_a_mostrar=cantidad
     }
   }
 }
