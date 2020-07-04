@@ -19,7 +19,7 @@
   </v-row>
 </template>
 <script>
-import ApiIndicador from '../../plugins/axios'
+import ApiIndicador from '../../plugins/apiMindicador'
 export default {
   data () {
     return {
