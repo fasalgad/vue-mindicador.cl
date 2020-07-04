@@ -1,4 +1,4 @@
-# testpracticatarde1
+# vue-mindicador.cl
 
 ## Project setup
 ```
