@@ -1,5 +1,8 @@
 # vue-mindicador.cl
 
+## proyecto básico de vue con vuex, vue-router, vuetify y axios llamando…
+## el api mindicador.cl
+
 ## Project setup
 ```
 yarn install
