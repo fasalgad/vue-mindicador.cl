@@ -6,6 +6,7 @@
     <indicador v-bind:propfecha="b_fecha" v-on:llamarcantidad="showcantidad"></indicador>
     <label>Cantidad de series que consulta</label> <br/>
     <label>{{cantidad_a_mostrar}}</label>
+    <v-btn @click="$router.push('/indicadores')">Indicadores</v-btn>
   </v-container>
 </template>
 

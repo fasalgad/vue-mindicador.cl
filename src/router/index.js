@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import ViewIndicadores from '../views/Indicadores.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,16 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path:'/indicadores',
+    name:'Indicadores',
+    component:ViewIndicadores
   },
   {
     path: '/about',
