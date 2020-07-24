@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <SlideGroupIndicadores :propindicadores="indicadores" v-on:EntregarIndicador="recibirIndicador"/>
+      <SlideGroupIndicadores :propindicadores="indicadores" @EntregarIndicador="recibirIndicador"/>
       <p v-show="indicadorSeleccionado">
           Fui Seleccionado {{indicadorSeleccionado}}
       </p>

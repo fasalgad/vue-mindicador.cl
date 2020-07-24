@@ -7,6 +7,7 @@
     <label>Cantidad de series que consulta</label> <br/>
     <label>{{cantidad_a_mostrar}}</label>
     <v-btn @click="$router.push('/indicadores')">Indicadores</v-btn>
+    <v-btn @click="$router.push('/indicadores2')">Indicadores 2</v-btn>
   </v-container>
 </template>
 
