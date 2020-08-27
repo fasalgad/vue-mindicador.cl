@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "author": "otro yo",
+      "title": "Nuevo dato",
+      "id": 1
+    },
+    {
+      "author": "otro yo",
+      "title": "Nuevo dato",
+      "id": 2
+    },
+    {
+      "title": "tigres",
+      "author": "asd",
+      "id": 3
+    },
+    {
+      "title": "tigres2",
+      "author": "asd2",
+      "id": 4
+    },
+    {
+      "title": "tigres2",
+      "author": "asd2",
+      "id": 5
+    },
+    {
+      "title": "tigres2",
+      "author": "asd2",
+      "id": 6
+    },
+    {
+      "title": "fasalgad",
+      "author": "salgado.fabian@gmail.com",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "lastname": "apellido",
+    "name": "nombre",
+    "rut": "rut",
+    "fecha_nac": "12/12/2012"
+  }
+}
